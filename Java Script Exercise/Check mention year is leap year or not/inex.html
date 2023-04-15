@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            div{
+                width: 600px;
+                border:1px solid black;
+                margin: 50px auto;
+                padding: 20px;
+                align-items: center;
+            }
+        </style>
+        <script>
+            function checkLeapYear(){
+                debugger;
+                var year=document.getElementById("txtyear").value;
+                year=parseInt(year);
+                var result="";
+                if(year%4==0){
+                    if(year%100==0){
+                        if(year%400==0){
+                            result="Its a leap year";
+                        }
+                        else{
+                            result="not a leap year";
+                        }
+                    }
+                    else{
+                    result="Its a leap year";
+                    }
+                }
+                else
+                {
+                    result="not a leap year";
+                }
+                document.getElementById("result").innerHTML=result;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Enter the year to check leap year</h1>
+            <input type="text" id="txtyear">
+            <button onclick="checkLeapYear()">Click here to check</button>
+            <h2 id="result">...</h2>
+        </div>
+    </body>
+</html>

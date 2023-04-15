@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            *{
+                font-size: 30px;
+            }
+        </style>
+        <script>
+            function Add()
+            {
+                var txtfirst=document.getElementById("txtfirst").value;
+                var txtsecond=document.getElementById("txtsecond").value;
+                var total=parseInt(txtfirst)+parseInt(txtsecond);
+                document.getElementById("result").innerHTML=total;
+            }
+
+            function Sub()
+            {
+                var txtfirst=document.getElementById("txtfirst").value;
+                var txtsecond=document.getElementById("txtsecond").value;
+                var total=txtfirst-txtsecond;
+                document.getElementById("result").innerHTML=total;
+            }
+            function mult()
+            {
+                var txtfirst=document.getElementById("txtfirst").value;
+                var txtsecond=document.getElementById("txtsecond").value;
+                var total=txtfirst*txtsecond;
+                document.getElementById("result").innerHTML=total;
+            }
+            function div()
+            {
+                var txtfirst=document.getElementById("txtfirst").value;
+                var txtsecond=document.getElementById("txtsecond").value;
+                var total=txtfirst/txtsecond;
+                document.getElementById("result").innerHTML=total;
+            }
+
+
+            function calc(symble){
+debugger;
+                var txtfirst=document.getElementById("txtfirst").value;
+                var txtsecond=document.getElementById("txtsecond").value;
+                var total=0;
+                if(symble=='+'){
+                    total=parseInt(txtfirst)+parseInt(txtsecond);
+                }
+                if(symble=='-'){
+                    total=txtfirst-txtsecond;
+                }
+                if(symble=='*'){
+                    total=txtfirst*txtsecond;
+                }
+                if(symble=='/'){
+                    total=txtfirst/txtsecond;
+                }
+
+
+
+                document.getElementById("result").innerHTML=total;
+            }
+        </script>
+    </head>
+
+    <body>
+        First textbox <input type="text" id="txtfirst"></input><br>
+        Second textbox <input type="text" id="txtsecond"></input>
+        <h1>Result: <span id="result">0</span></h1>
+        <button onclick="Add()">Add(+)</button>
+        <button onclick="Sub()">Substract(-)</button>
+        <button onclick="calc('*')">Multiply(*)</button>
+        <button onclick="div()">Devid(/)</button>
+        <hr/>
+        <button onclick="calc('+')">Add(+)</button>
+        <button onclick="calc('-')">Substract(-)</button>
+        <button onclick="calc('*')">Multiply(*)</button>
+        <button onclick="calc('/')">Devide(/)</button>
+        
+    </body>
+</html>

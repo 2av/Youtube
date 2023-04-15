@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+        *{
+            font-size: 40px;
+        }            
+        </style>
+        <script>
+            function Add(){
+                var first=document.getElementById("txtfirst").value;
+                var second=document.getElementById("txtsecond").value;
+                var tot=parseInt(first)+parseInt(second);
+                 document.getElementById("result").innerHTML=tot;
+            }
+            function Sub(){
+                var first=document.getElementById("txtfirst").value;
+                var second=document.getElementById("txtsecond").value;
+                var tot=parseInt(first)-parseInt(second);
+                 document.getElementById("result").innerHTML=tot;
+            }
+            function Multi(){
+                var first=document.getElementById("txtfirst").value;
+                var second=document.getElementById("txtsecond").value;
+                var tot=parseInt(first)*parseInt(second);
+                 document.getElementById("result").innerHTML=tot;
+            }
+            function Div(){
+                var first=document.getElementById("txtfirst").value;
+                var second=document.getElementById("txtsecond").value;
+                var tot=parseInt(first)/parseInt(second);
+                 document.getElementById("result").innerHTML=tot;
+            }
+
+            function calc(option){
+                debugger;
+                var first=document.getElementById("txtfirst").value;
+                var second=document.getElementById("txtsecond").value;
+                var tot=0;
+                if(option=='+'){
+                    tot=parseInt(first)+parseInt(second);
+                }
+                if(option=='-'){
+                    tot=parseInt(first)-parseInt(second);
+                }
+                if(option=='*'){
+                    tot=parseInt(first)*parseInt(second);
+                }
+                if(option=='/'){
+                    tot=parseInt(first)/parseInt(second);
+                }
+                document.getElementById("result").innerHTML=tot;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            First TextBox <input type="text" id="txtfirst"/>
+        </div>
+        <div>
+            Second TextBox <input type="text" id="txtsecond"/>
+        </div>
+        <div>
+            Result: <span id="result">  </span>
+        </div>
+
+        <div>
+            <button onclick="Add()">Add(+)</button>
+            <button onclick="Sub()">Sub(-)</button>
+            <button onclick="Multi()">Multi(*)</button>
+            <button onclick="Div()">Div(/)</button>
+        </div>
+        <hr>
+        <div>
+            <button onclick="calc('+')">Add(+)</button>
+            <button onclick="calc('-')">Sub(-)</button>
+            <button onclick="calc('*')">Multi(*)</button>
+            <button onclick="calc('/')">Div(/)</button>
+        </div>
+
+ 
+    </body>
+</html>
